@@ -1,0 +1,2 @@
+android.app.Application
+App_standard.Droid.App_standard.Droid

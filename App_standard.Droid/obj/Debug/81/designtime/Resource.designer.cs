@@ -2402,8 +2402,8 @@ namespace App_standard.Droid
 			// aapt resource value: 0x7F010004
 			public const int cartButton = 2130771972;
 			
-			// aapt resource value: 0x7F010007
-			public const int cartCheckOutButton = 2130771975;
+			// aapt resource value: 0x7F010006
+			public const int cartCheckOutButton = 2130771974;
 			
 			// aapt resource value: 0x7F0C001D
 			public const int center = 2131492893;
@@ -2423,8 +2423,8 @@ namespace App_standard.Droid
 			// aapt resource value: 0x7F010003
 			public const int contentFrame = 2130771971;
 			
-			// aapt resource value: 0x7F010006
-			public const int contentFrameCart = 2130771974;
+			// aapt resource value: 0x7F010007
+			public const int contentFrameCart = 2130771975;
 			
 			// aapt resource value: 0x7F0C0021
 			public const int contentPanel = 2131492897;

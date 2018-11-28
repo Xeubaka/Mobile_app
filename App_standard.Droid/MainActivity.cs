@@ -11,9 +11,9 @@ using Android.Support.Design.Widget;
 namespace App_standard.Droid
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
-    public class MainActivity : Android.Support.V4.App.FragmentActivity 
+    public class MainActivity : Android.Support.V4.App.FragmentActivity
     {
-        private Android.Support.V7.Widget.Toolbar toolbar;
+        Android.Support.V7.Widget.Toolbar toolbar;
         Button cartButton;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -22,12 +22,21 @@ namespace App_standard.Droid
             SetContentView(Resource.Layout.activity_main);  
             toolbar = (Android.Support.V7.Widget.Toolbar)FindViewById(Resource.Id.toolBar);
             toolbar.InflateMenu(Resource.Menu.optionMenu);
+            toolbar.MenuItemClick += Toolbar_MenuItemClick;
 
             FragmentNavigate(new ItenFragment());
 
             cartButton = (Button)FindViewById(Resource.Id.cartButton);
 
             cartButton.Click += CartButton_Click;
+        }
+
+        private void Toolbar_MenuItemClick(object sender, Android.Support.V7.Widget.Toolbar.MenuItemClickEventArgs e)
+        {
+            if(e.Item.ItemId == Resource.Id.action_filter)
+            {
+                //implementar lista de filtros 
+            } 
         }
 
         private void CartButton_Click(object sender, EventArgs e)

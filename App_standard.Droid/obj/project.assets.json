@@ -2,7 +2,20 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v8.1": {
-      "Newtonsoft.Json/11.0.2": {
+      "Glide.Xamarin/4.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.Annotations": "25.4.0.2",
+          "Xamarin.Android.Support.v4": "25.4.0.2"
+        },
+        "compile": {
+          "lib/MonoAndroid10/Glide.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Glide.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -204,13 +217,23 @@
           "build/MonoAndroid81/Xamarin.Android.Support.Transition.targets": {}
         }
       },
-      "Xamarin.Android.Support.v4/23.4.0.1": {
+      "Xamarin.Android.Support.v4/27.0.2.1": {
         "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.Compat": "[27.0.2.1]",
+          "Xamarin.Android.Support.Core.UI": "[27.0.2.1]",
+          "Xamarin.Android.Support.Core.Utils": "[27.0.2.1]",
+          "Xamarin.Android.Support.Fragment": "[27.0.2.1]",
+          "Xamarin.Android.Support.Media.Compat": "[27.0.2.1]"
+        },
         "compile": {
-          "lib/MonoAndroid403/Xamarin.Android.Support.v4.dll": {}
+          "lib/MonoAndroid81/Xamarin.Android.Support.v4.dll": {}
         },
         "runtime": {
-          "lib/MonoAndroid403/Xamarin.Android.Support.v4.dll": {}
+          "lib/MonoAndroid81/Xamarin.Android.Support.v4.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid81/Xamarin.Android.Support.v4.targets": {}
         }
       },
       "Xamarin.Android.Support.v7.AppCompat/27.0.2.1": {
@@ -234,16 +257,20 @@
           "build/MonoAndroid81/Xamarin.Android.Support.v7.AppCompat.targets": {}
         }
       },
-      "Xamarin.Android.Support.v7.RecyclerView/23.4.0.1": {
+      "Xamarin.Android.Support.v7.RecyclerView/27.0.2.1": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Android.Support.v4": "[23.4.0.1]"
+          "Xamarin.Android.Support.Compat": "[27.0.2.1]",
+          "Xamarin.Android.Support.Core.UI": "[27.0.2.1]"
         },
         "compile": {
-          "lib/MonoAndroid403/Xamarin.Android.Support.v7.RecyclerView.dll": {}
+          "lib/MonoAndroid81/Xamarin.Android.Support.v7.RecyclerView.dll": {}
         },
         "runtime": {
-          "lib/MonoAndroid403/Xamarin.Android.Support.v7.RecyclerView.dll": {}
+          "lib/MonoAndroid81/Xamarin.Android.Support.v7.RecyclerView.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid81/Xamarin.Android.Support.v7.RecyclerView.targets": {}
         }
       },
       "Xamarin.Android.Support.Vector.Drawable/27.0.2.1": {
@@ -273,33 +300,54 @@
     }
   },
   "libraries": {
-    "Newtonsoft.Json/11.0.2": {
-      "sha512": "znZGbws7E4BA9jxNZ7FuiIRI3C9hrgatVQSTKhIYZYNOud4M5VfGlTYi6RdYO5sQrebFuF/g9UEV3hOxDMXF6Q==",
+    "Glide.Xamarin/4.1.1": {
+      "sha512": "l5B9PJHXoZGfCHQBWODnPG1Y0VUa7KMYBCOpHBk625vPl33Oeco2+2Ci4VM1Hc4eayheWiupkJOyIPCqGI4u7A==",
       "type": "package",
-      "path": "newtonsoft.json/11.0.2",
+      "path": "glide.xamarin/4.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "glide.xamarin.4.1.1.nupkg.sha512",
+        "glide.xamarin.nuspec",
+        "lib/MonoAndroid10/Glide.dll"
+      ]
+    },
+    "Newtonsoft.Json/12.0.1": {
+      "sha512": "jmVyoEyk0In8r+AObYQyFKVFm7uSRzE0XSHSbEtBJcZDMV6DqJoyB4FLcHwprPVhAh826so0db3DIKXVnpGoPA==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.pdb",
         "lib/net20/Newtonsoft.Json.xml",
         "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.pdb",
         "lib/net35/Newtonsoft.Json.xml",
         "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.pdb",
         "lib/net40/Newtonsoft.Json.xml",
         "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.pdb",
         "lib/net45/Newtonsoft.Json.xml",
         "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.pdb",
         "lib/netstandard1.0/Newtonsoft.Json.xml",
         "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.pdb",
         "lib/netstandard1.3/Newtonsoft.Json.xml",
         "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.pdb",
         "lib/netstandard2.0/Newtonsoft.Json.xml",
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.pdb",
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.pdb",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.11.0.2.nupkg.sha512",
+        "newtonsoft.json.12.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec"
       ]
     },
@@ -477,15 +525,17 @@
         "xamarin.android.support.transition.nuspec"
       ]
     },
-    "Xamarin.Android.Support.v4/23.4.0.1": {
-      "sha512": "Kf5rfOMMBbk65UJHRqVfC9bq0U35uJYk1OsubQ4vJFFHY1qwr+E2QjEVeA36P2T+pr6/9xILbwqKMhdJqFxz0Q==",
+    "Xamarin.Android.Support.v4/27.0.2.1": {
+      "sha512": "cK4ixeeIPSF1xl371Rb2CiEMrSCXa5kXaehsSkeAFGtgpAQvbt6FbEKk501fzVi/HzNkETzajEtsQ9PMttZi9A==",
       "type": "package",
-      "path": "xamarin.android.support.v4/23.4.0.1",
+      "path": "xamarin.android.support.v4/27.0.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/MonoAndroid403/Xamarin.Android.Support.v4.dll",
-        "xamarin.android.support.v4.23.4.0.1.nupkg.sha512",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/MonoAndroid81/Xamarin.Android.Support.v4.targets",
+        "lib/MonoAndroid81/Xamarin.Android.Support.v4.dll",
+        "xamarin.android.support.v4.27.0.2.1.nupkg.sha512",
         "xamarin.android.support.v4.nuspec"
       ]
     },
@@ -503,15 +553,18 @@
         "xamarin.android.support.v7.appcompat.nuspec"
       ]
     },
-    "Xamarin.Android.Support.v7.RecyclerView/23.4.0.1": {
-      "sha512": "BXY/HXAJK8L7t6rz3g934DC7+BP2pmrUpeVZja8kr2LHsPIp0YViId0D15DBKvhpfbLep+I9mZatgXGAFjQYfw==",
+    "Xamarin.Android.Support.v7.RecyclerView/27.0.2.1": {
+      "sha512": "ze4MYJlicTnIUGP37fVcrhgPfF47dG7TcRv1jkExBBqHoMk68kcrpg0cCNvCjIAhGdMtgEv3i+CiUC5QWLYQwA==",
       "type": "package",
-      "path": "xamarin.android.support.v7.recyclerview/23.4.0.1",
+      "path": "xamarin.android.support.v7.recyclerview/27.0.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/MonoAndroid403/Xamarin.Android.Support.v7.RecyclerView.dll",
-        "xamarin.android.support.v7.recyclerview.23.4.0.1.nupkg.sha512",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/MonoAndroid81/Xamarin.Android.Support.v7.RecyclerView.targets",
+        "lib/MonoAndroid81/Xamarin.Android.Support.v7.RecyclerView.dll",
+        "proguard/proguard.txt",
+        "xamarin.android.support.v7.recyclerview.27.0.2.1.nupkg.sha512",
         "xamarin.android.support.v7.recyclerview.nuspec"
       ]
     },
@@ -539,11 +592,12 @@
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v8.1": [
       "App_standard >= 1.0.0",
-      "Newtonsoft.Json >= 11.0.2",
+      "Glide.Xamarin >= 4.1.1",
+      "Newtonsoft.Json >= 12.0.1",
       "Xamarin.Android.Support.Design >= 27.0.2.1",
-      "Xamarin.Android.Support.v4 >= 23.4.0.1",
+      "Xamarin.Android.Support.v4 >= 27.0.2.1",
       "Xamarin.Android.Support.v7.AppCompat >= 27.0.2.1",
-      "Xamarin.Android.Support.v7.RecyclerView >= 23.4.0.1"
+      "Xamarin.Android.Support.v7.RecyclerView >= 27.0.2.1"
     ]
   },
   "packageFolders": {
@@ -583,9 +637,13 @@
     "frameworks": {
       "monoandroid81": {
         "dependencies": {
+          "Glide.Xamarin": {
+            "target": "Package",
+            "version": "[4.1.1, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
-            "version": "[11.0.2, )"
+            "version": "[12.0.1, )"
           },
           "Xamarin.Android.Support.Design": {
             "target": "Package",
@@ -593,7 +651,7 @@
           },
           "Xamarin.Android.Support.v4": {
             "target": "Package",
-            "version": "[23.4.0.1, )"
+            "version": "[27.0.2.1, )"
           },
           "Xamarin.Android.Support.v7.AppCompat": {
             "target": "Package",
@@ -601,22 +659,10 @@
           },
           "Xamarin.Android.Support.v7.RecyclerView": {
             "target": "Package",
-            "version": "[23.4.0.1, )"
+            "version": "[27.0.2.1, )"
           }
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Downgrade de pacote detectado: Xamarin.Android.Support.v7.RecyclerView de 27.0.2.1 para 23.4.0.1. Referencie o pacote diretamente do projeto para selecionar uma versão diferente. \r\n App_standard.Droid -> Xamarin.Android.Support.Design 27.0.2.1 -> Xamarin.Android.Support.v7.RecyclerView (= 27.0.2.1) \r\n App_standard.Droid -> Xamarin.Android.Support.v7.RecyclerView (>= 23.4.0.1)",
-      "libraryId": "Xamarin.Android.Support.v7.RecyclerView",
-      "targetGraphs": [
-        "MonoAndroid,Version=v8.1"
-      ]
-    }
-  ]
+  }
 }

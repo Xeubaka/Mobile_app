@@ -5,10 +5,15 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Com.Bumptech.Glide;
+using Com.Bumptech.Glide.Load.Engine;
+using Java.IO;
+using Java.Net;
 
 namespace App_standard.Droid
 {
@@ -17,10 +22,13 @@ namespace App_standard.Droid
 
         Context context;
         List<Iten> Itens;
+        List<Promotion> Promotions;
 
-        public ItenAdapter(Activity activity, Context context, List<Iten> Itens)
+        public ItenAdapter(Context context,List<Iten> Itens, List<Promotion> promotions)
         {
             this.context = context;
+            this.Itens = Itens;
+            this.Promotions = promotions;
         }
 
 
@@ -60,21 +68,44 @@ namespace App_standard.Droid
                 holder.btn_less = view.FindViewById<Button>(Resource.Id.btn_less);
                 holder.btn_plus = view.FindViewById<Button>(Resource.Id.btn_plus);
 
+                holder.btn_less.Click += Btn_less_Click;
+                holder.btn_plus.Click += Btn_plus_Click;
+
                 view.Tag = holder;
             }
 
 
             //fill in your items
-            var Itens = Itens[position];
-            //holder.imageIten = Itens.imageIten;
-            holder.nameIten.Text = Itens.nameIten;
-            holder.promotionIten.Text = Itens.promotionIten;
-            holder.priceIten.Text = Itens.priceIten;
+            var Iten = Itens[position];
+            if(Iten != null)
+            {
+                //implementar get imagem url
+            }
+            holder.nameIten.Text = Iten.Name;
+            foreach (var promo in Promotions)
+            {
+                if(promo.Category_id == Iten.Category_Id)
+                {
+                    //holder.promotionIten.Text = "" + promo.Polices.discount;
+                }
+            }
+            //holder.promotionIten.Text = promotion.policies;
+            holder.priceIten.Text = ""+Iten.Price;
             //default:
             holder.checkBoxIten.Checked = false;
             holder.quantidadeIten.Text = "0";
 
             return view;
+        }
+
+        private void Btn_plus_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Btn_less_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         //Fill in cound here, currently 0

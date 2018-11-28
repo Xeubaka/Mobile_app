@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Model\HttpRequest.cs" />
     <Compile Include="Model\Iten.cs" />
+    <Compile Include="Model\Polices.cs" />
     <Compile Include="Model\Promotion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

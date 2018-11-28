@@ -20,8 +20,9 @@ namespace App_standard.Droid
             base.OnCreate(savedInstanceState);
 
             // Create your fragment here
-            var itens = await Iten.GetItens();
-            ListAdapter = new ItenAdapter(Activity, itens);
+            List<Iten> itens = await Iten.GetItens();
+            List<Promotion> promotions = await Promotion.GetPromotions();
+            ListAdapter = new ItenAdapter(Activity, itens, promotions);
         }
     }
 }

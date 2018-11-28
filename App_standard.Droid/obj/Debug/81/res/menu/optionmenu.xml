@@ -1,4 +1,4 @@
-<!--For all properties see: http://developer.android.com/guide/topics/resources/menu-resource.html--><menu xmlns:app="http://schema.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"><item android:id="@+id/action_filter" android:showAsAction="always" android:text="Filter" /></menu><!-- Code to implement into Activity:
+<!--For all properties see: http://developer.android.com/guide/topics/resources/menu-resource.html--><menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"><item android:id="@+id/action_filter" android:showAsAction="always" android:icon="@mipmap/ic_filter_list" android:text="Filter" /></menu><!-- Code to implement into Activity:
 
 Android.Widget.SearchView searchView;
 public override bool OnCreateOptionsMenu(IMenu menu)

@@ -1,0 +1,7 @@
+App_standard
+Newtonsoft.Json
+System.Runtime
+Xamarin.Android.Support.v4
+Xamarin.Android.Support.v7.RecyclerView
+System.Resources.ResourceManager
+netstandard
