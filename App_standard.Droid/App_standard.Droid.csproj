@@ -237,7 +237,7 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_star_border.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\menu\optionMenu.xml" />
+    <AndroidResource Include="Resources\Menu\optionMenu.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\CartCheckOut.axml">

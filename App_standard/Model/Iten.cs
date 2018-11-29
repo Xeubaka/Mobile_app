@@ -17,10 +17,33 @@ namespace App_standard
         public double Price { get; set; }
         public int? Category_Id { get; set; }
 
+        public int btn_less_id{ get; set;}
+        public int btn_plus_id { get; set; }
+        public int Quantidade { get; set; }
+
         public static async Task<List<Iten>> GetItens()
         {
             List<Iten> itens = await HttpRequest.FetchData<Iten>(Url);
             return itens;
         }
+
+        /*
+        public void Button_OnClick(object sender, EventArgs e)
+        {
+            if(sender.id == btn_less_id)
+            {
+                Quantidade -= Quantidade;
+            }
+            if (sender.id == btn_plus_id)
+            {
+                Quantidade += Quantidade;
+            }
+
+            if(Quantidade < 0)
+            {
+                Quantidade = 0;
+            }
+        }
+        */
     }
 }

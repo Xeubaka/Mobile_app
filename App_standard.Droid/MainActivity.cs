@@ -21,6 +21,8 @@ namespace App_standard.Droid
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);  
             toolbar = (Android.Support.V7.Widget.Toolbar)FindViewById(Resource.Id.toolBar);
+            toolbar.SetTitle(Resource.String.app_name);
+            toolbar.SetBackgroundColor(Android.Graphics.Color.LightBlue);
             toolbar.InflateMenu(Resource.Menu.optionMenu);
             toolbar.MenuItemClick += Toolbar_MenuItemClick;
 
@@ -35,7 +37,7 @@ namespace App_standard.Droid
         {
             if(e.Item.ItemId == Resource.Id.action_filter)
             {
-                //implementar lista de filtros 
+                Toast.MakeText(this, "filter clicked", ToastLength.Long).Show(); 
             } 
         }
 

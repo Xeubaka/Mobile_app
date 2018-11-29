@@ -13,6 +13,8 @@ namespace App_standard
         public string Name { get; set; }
         public int Category_id { get; set; }
         public object Polices { get; set; }
+        public int Min { get; set; }
+        public double Discount { get; set; }
 
         //implementar HttpRequest.FetchData<Promotion>(Url);
         public static async Task<List<Promotion>> GetPromotions()
@@ -20,5 +22,6 @@ namespace App_standard
             var Promotions = await HttpRequest.FetchData<Promotion>(Url);
             return Promotions;
         }
+
     }
 }

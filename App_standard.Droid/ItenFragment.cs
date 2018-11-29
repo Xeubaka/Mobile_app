@@ -24,5 +24,6 @@ namespace App_standard.Droid
             List<Promotion> promotions = await Promotion.GetPromotions();
             ListAdapter = new ItenAdapter(Activity, itens, promotions);
         }
+
     }
 }

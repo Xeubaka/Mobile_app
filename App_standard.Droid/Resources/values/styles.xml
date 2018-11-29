@@ -8,4 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="actionOverflowButtonStyle">@style/OverFlow</item>
+  </style>
+
+  <style name="OverFlow" parent="Widget.AppCompat.ActionButton.Overflow">
+    <item name="android:src">@mipmap/ic_filter_list</item>
+  </style>
+
 </resources>

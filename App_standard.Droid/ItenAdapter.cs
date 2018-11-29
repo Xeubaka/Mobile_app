@@ -20,15 +20,15 @@ namespace App_standard.Droid
     class ItenAdapter : BaseAdapter
     {
 
-        Context context;
+        Context Context;
         List<Iten> Itens;
         List<Promotion> Promotions;
 
-        public ItenAdapter(Context context,List<Iten> Itens, List<Promotion> promotions)
+        public ItenAdapter(Context context,List<Iten> itens, List<Promotion> promotions)
         {
-            this.context = context;
-            this.Itens = Itens;
-            this.Promotions = promotions;
+            Context = context;
+            Itens = itens;
+            Promotions = promotions;
         }
 
 
@@ -53,7 +53,7 @@ namespace App_standard.Droid
             if (holder == null)
             {
                 holder = new ItenAdapterViewHolder();
-                var inflater = context.GetSystemService(Context.LayoutInflaterService).JavaCast<LayoutInflater>();
+                var inflater = Context.GetSystemService(Context.LayoutInflaterService).JavaCast<LayoutInflater>();
                 //replace with your item and your holder items
                 //comment back in
 
@@ -68,8 +68,8 @@ namespace App_standard.Droid
                 holder.btn_less = view.FindViewById<Button>(Resource.Id.btn_less);
                 holder.btn_plus = view.FindViewById<Button>(Resource.Id.btn_plus);
 
-                holder.btn_less.Click += Btn_less_Click;
-                holder.btn_plus.Click += Btn_plus_Click;
+                //holder.btn_less.Click += Btn_Click;
+                //holder.btn_plus.Click += Btn_Click;
 
                 view.Tag = holder;
             }
@@ -77,6 +77,8 @@ namespace App_standard.Droid
 
             //fill in your items
             var Iten = Itens[position];
+            Iten.btn_less_id = holder.btn_less.Id;
+            Iten.btn_plus_id = holder.btn_plus.Id;
             if(Iten != null)
             {
                 //implementar get imagem url
@@ -86,28 +88,26 @@ namespace App_standard.Droid
             {
                 if(promo.Category_id == Iten.Category_Id)
                 {
-                    //holder.promotionIten.Text = "" + promo.Polices.discount;
+                    //holder.promotionIten.Text = "" + promo.Polices.ToString();
+                    holder.promotionIten.Text = "" + promo.ToString();
                 }
+                
             }
             //holder.promotionIten.Text = promotion.policies;
             holder.priceIten.Text = ""+Iten.Price;
             //default:
             holder.checkBoxIten.Checked = false;
-            holder.quantidadeIten.Text = "0";
+            holder.quantidadeIten.Text = ""+Iten.Quantidade;
 
             return view;
         }
 
-        private void Btn_plus_Click(object sender, EventArgs e)
+        /*
+        private void Btn_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Iten.Button_OnClick(e);
         }
-
-        private void Btn_less_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
+        */
         //Fill in cound here, currently 0
         public override int Count => Itens.Count;
 

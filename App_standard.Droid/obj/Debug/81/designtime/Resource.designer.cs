@@ -3749,6 +3749,9 @@ namespace App_standard.Droid
 			// aapt resource value: 0x7F1600A9
 			public const int Base_Widget_Design_TabLayout = 2132148393;
 			
+			// aapt resource value: 0x7F070003
+			public const int OverFlow = 2131165187;
+			
 			// aapt resource value: 0x7F1600AA
 			public const int Platform_AppCompat = 2132148394;
 			
