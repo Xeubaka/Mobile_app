@@ -2343,7 +2343,13 @@ namespace App_standard.Droid
 			public const int action_divider = 2131492866;
 			
 			// aapt resource value: 0x7F010017
-			public const int action_filter = 2130771991;
+			public const int action_filter_id = 2130771991;
+			
+			// aapt resource value: 0x7F010018
+			public const int action_filter_name = 2130771992;
+			
+			// aapt resource value: 0x7F010019
+			public const int action_filter_price = 2130771993;
 			
 			// aapt resource value: 0x7F0C0003
 			public const int action_image = 2131492867;
@@ -2402,8 +2408,8 @@ namespace App_standard.Droid
 			// aapt resource value: 0x7F010004
 			public const int cartButton = 2130771972;
 			
-			// aapt resource value: 0x7F010006
-			public const int cartCheckOutButton = 2130771974;
+			// aapt resource value: 0x7F010007
+			public const int cartCheckOutButton = 2130771975;
 			
 			// aapt resource value: 0x7F0C001D
 			public const int center = 2131492893;
@@ -2423,8 +2429,8 @@ namespace App_standard.Droid
 			// aapt resource value: 0x7F010003
 			public const int contentFrame = 2130771971;
 			
-			// aapt resource value: 0x7F010007
-			public const int contentFrameCart = 2130771975;
+			// aapt resource value: 0x7F010006
+			public const int contentFrameCart = 2130771974;
 			
 			// aapt resource value: 0x7F0C0021
 			public const int contentPanel = 2131492897;

@@ -272,3 +272,4 @@ C:\Users\Luis Roberto\source\repos\App_mobil\Mobile_app\App_standard\App_standar
 C:\Users\Luis Roberto\source\repos\App_mobil\Mobile_app\App_standard\App_standard.Droid\obj\Debug\81\android\assets\System.Web.Services.pdb
 C:\Users\Luis Roberto\source\repos\App_mobil\Mobile_app\App_standard\App_standard.Droid\obj\Debug\81\android\assets\System.Xml.Linq.pdb
 C:\Users\Luis Roberto\source\repos\App_mobil\Mobile_app\App_standard\App_standard.Droid\obj\Debug\81\android\assets\System.Xml.pdb
+C:\Users\Luis Roberto\source\repos\App_mobil\Mobile_app\App_standard\App_standard.Droid\obj\Debug\81\linksrc\App_standard.dll.mdb

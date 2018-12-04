@@ -749,7 +749,9 @@ int id action_bar_title 0x7f08005a
 int id action_container 0x7f0800a8
 int id action_context_bar 0x7f08007d
 int id action_divider 0x7f0800af
-int id action_filter 0x7f0800be
+int id action_filter_id 0x7f0800be
+int id action_filter_name 0x7f0800bf
+int id action_filter_price 0x7f0800c0
 int id action_image 0x7f0800a9
 int id action_menu_divider 0x7f080003
 int id action_menu_presenter 0x7f080004
@@ -773,7 +775,7 @@ int id btn_plus 0x7f0800a7
 int id buttonPanel 0x7f080063
 int id cancel_action 0x7f0800ac
 int id cartButton 0x7f08008d
-int id cartCheckOutButton 0x7f08008f
+int id cartCheckOutButton 0x7f080090
 int id center 0x7f080045
 int id center_horizontal 0x7f080046
 int id center_vertical 0x7f080047
@@ -785,7 +787,7 @@ int id clip_vertical 0x7f08004f
 int id collapseActionView 0x7f080039
 int id container 0x7f080093
 int id contentFrame 0x7f08008c
-int id contentFrameCart 0x7f080090
+int id contentFrameCart 0x7f08008f
 int id contentPanel 0x7f080066
 int id coordinator 0x7f080094
 int id custom 0x7f08006d

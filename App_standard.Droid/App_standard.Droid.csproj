@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CartActivity.cs" />
+    <Compile Include="ItenActivity.cs" />
     <Compile Include="ItenAdapter.cs" />
     <Compile Include="ItenFragment.cs" />
     <Compile Include="MainActivity.cs" />

@@ -15,10 +15,11 @@ namespace App_standard.Droid
     {
         Android.Support.V7.Widget.Toolbar toolbar;
         Button cartButton;
+        ItenFragment ItenFragment = new ItenFragment();
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            // Set our view from the "main" layout resource
+            // Set our view from the "main" layout resource            
             SetContentView(Resource.Layout.activity_main);  
             toolbar = (Android.Support.V7.Widget.Toolbar)FindViewById(Resource.Id.toolBar);
             toolbar.SetTitle(Resource.String.app_name);
@@ -35,10 +36,25 @@ namespace App_standard.Droid
 
         private void Toolbar_MenuItemClick(object sender, Android.Support.V7.Widget.Toolbar.MenuItemClickEventArgs e)
         {
-            if(e.Item.ItemId == Resource.Id.action_filter)
+            string option = "Id";
+            if(e.Item.ItemId == Resource.Id.action_filter_id)
             {
-                Toast.MakeText(this, "filter clicked", ToastLength.Long).Show(); 
-            } 
+                option = "Id";
+            }
+            if (e.Item.ItemId == Resource.Id.action_filter_name)
+            {
+                option = "Name";
+            }
+            if (e.Item.ItemId == Resource.Id.action_filter_price)
+            {
+                option = "Price";
+            }
+            displayMensagem(option);
+        }
+
+        public void displayMensagem(string msg)
+        {
+            Toast.MakeText(this, "filtering by "+msg, ToastLength.Long).Show();
         }
 
         private void CartButton_Click(object sender, EventArgs e)

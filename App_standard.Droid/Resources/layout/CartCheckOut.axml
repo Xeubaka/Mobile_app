@@ -8,6 +8,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clickable="false" />
+
+	<FrameLayout
+	android:id="@+id/contentFrameCart"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"/>
+
 	<RelativeLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
@@ -20,11 +26,5 @@
 		android:id="@+id/cartCheckOutButton" />
 	</RelativeLayout>
 
-	<FrameLayout
-	android:id="@+id/contentFrameCart"
-	android:layout_width="match_parent"
-	android:layout_height="wrap_content"/>
-
-	
 
 </LinearLayout>

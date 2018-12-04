@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.Graphics;
@@ -13,21 +13,22 @@ using Android.Widget;
 using Com.Bumptech.Glide;
 using Com.Bumptech.Glide.Load.Engine;
 using Java.IO;
+using Java.Lang;
 using Java.Net;
 
 namespace App_standard.Droid
 {
-    class ItenAdapter : BaseAdapter
+    public class ItenAdapter : BaseAdapter
     {
 
         Context Context;
         List<Iten> Itens;
         List<Promotion> Promotions;
 
-        public ItenAdapter(Context context,List<Iten> itens, List<Promotion> promotions)
+        public ItenAdapter(Context context, List<Iten> itens, List<Promotion> promotions)
         {
             Context = context;
-            Itens = itens;
+            Itens = itens; 
             Promotions = promotions;
         }
 
@@ -68,9 +69,6 @@ namespace App_standard.Droid
                 holder.btn_less = view.FindViewById<Button>(Resource.Id.btn_less);
                 holder.btn_plus = view.FindViewById<Button>(Resource.Id.btn_plus);
 
-                //holder.btn_less.Click += Btn_Click;
-                //holder.btn_plus.Click += Btn_Click;
-
                 view.Tag = holder;
             }
 
@@ -79,41 +77,57 @@ namespace App_standard.Droid
             var Iten = Itens[position];
             Iten.btn_less_id = holder.btn_less.Id;
             Iten.btn_plus_id = holder.btn_plus.Id;
-            if(Iten != null)
+            holder.quantidadeIten.Text = ""+Iten.Quantidade;
+            if (Iten != null)
             {
                 //implementar get imagem url
             }
             holder.nameIten.Text = Iten.Name;
             foreach (var promo in Promotions)
             {
-                if(promo.Category_id == Iten.Category_Id)
+                if (promo.Category_id == Iten.Category_Id)
                 {
                     //holder.promotionIten.Text = "" + promo.Polices.ToString();
-                    holder.promotionIten.Text = "" + promo.ToString();
+                    holder.promotionIten.Text = "" + promo.Name;
                 }
-                
+
             }
             //holder.promotionIten.Text = promotion.policies;
-            holder.priceIten.Text = ""+Iten.Price;
+            holder.priceIten.Text = "R$ " + Iten.Price;
             //default:
             holder.checkBoxIten.Checked = false;
-            holder.quantidadeIten.Text = ""+Iten.Quantidade;
 
             return view;
         }
 
-        /*
-        private void Btn_Click(object sender, EventArgs e)
+
+        public bool Btn_Click(Button sender, EventArgs e)
         {
-            Iten.Button_OnClick(e);
+            Iten i = Itens.Find(x => x.btn_less_id == sender.Id);
+            if (i.Id == 0)
+            {
+                i = Itens.FirstOrDefault(x => x.btn_plus_id == sender.Id);
+                i.Quantidade--;
+                if(i.Quantidade < 0)
+                {
+                    i.Quantidade = 0;
+                }
+                return true;
+            }
+            if(i.Id != 0)
+            {
+                i.Quantidade++;
+                return true;
+            }
+            return false;
         }
-        */
         //Fill in cound here, currently 0
         public override int Count => Itens.Count;
 
+        
     }
 
-    class ItenAdapterViewHolder : Java.Lang.Object
+    public class ItenAdapterViewHolder : Java.Lang.Object
     {
         //Your adapter views to re-use
         public ImageView imageIten { get; set; }
@@ -126,4 +140,5 @@ namespace App_standard.Droid
         public Button btn_plus { get; set; }
 
     }
+
 }

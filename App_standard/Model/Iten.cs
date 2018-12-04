@@ -26,24 +26,5 @@ namespace App_standard
             List<Iten> itens = await HttpRequest.FetchData<Iten>(Url);
             return itens;
         }
-
-        /*
-        public void Button_OnClick(object sender, EventArgs e)
-        {
-            if(sender.id == btn_less_id)
-            {
-                Quantidade -= Quantidade;
-            }
-            if (sender.id == btn_plus_id)
-            {
-                Quantidade += Quantidade;
-            }
-
-            if(Quantidade < 0)
-            {
-                Quantidade = 0;
-            }
-        }
-        */
     }
 }

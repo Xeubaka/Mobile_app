@@ -2963,7 +2963,9 @@ containing a value of this type.
         public static int action_container=0x7f0800a8;
         public static int action_context_bar=0x7f08007d;
         public static int action_divider=0x7f0800af;
-        public static int action_filter=0x7f0800be;
+        public static int action_filter_id=0x7f0800be;
+        public static int action_filter_name=0x7f0800bf;
+        public static int action_filter_price=0x7f0800c0;
         public static int action_image=0x7f0800a9;
         public static int action_menu_divider=0x7f080003;
         public static int action_menu_presenter=0x7f080004;

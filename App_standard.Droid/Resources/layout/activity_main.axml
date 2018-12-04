@@ -12,15 +12,17 @@
 	
 
 	<FrameLayout
-	android:id="@+id/contentFrame"
-	android:layout_width="match_parent"
-	android:layout_height="wrap_content"/>
-
-	<Button
-		android:text="CARRINHO"
+		android:id="@+id/contentFrame"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/cartButton"
-        android:gravity="center|bottom"/>
+	/>
+
+		<Button
+			android:text="CARRINHO"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center|bottom"
+			android:id="@+id/cartButton"/>
 
 </LinearLayout>

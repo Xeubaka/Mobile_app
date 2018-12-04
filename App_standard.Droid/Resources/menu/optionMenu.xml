@@ -1,13 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <!--For all properties see: http://developer.android.com/guide/topics/resources/menu-resource.html-->
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:tools="http://schemas.android.com/tools">
+	xmlns:app="http://schemas.android.com/apk/res-auto">
   
-  <item android:id="@+id/action_filter"
+  <item android:id="@+id/action_filter_id"
         android:showAsAction="always"
-        android:text="Filter"/>
-  
+        android:text="Filter by Id"/>
+  <iten android:id="@+id/action_filter_name"
+        android:showAsAction="always"
+        android:text="Filter by Name"/>
+  <iten android:id="@+id/action_filter_price"
+        android:showAsAction="always"
+        android:text="Filter by Price"/>
 </menu>
 
 <!-- Code to implement into Activity:

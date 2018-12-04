@@ -2963,7 +2963,9 @@ containing a value of this type.
         public static final int action_container=0x7f0800a8;
         public static final int action_context_bar=0x7f08007d;
         public static final int action_divider=0x7f0800af;
-        public static final int action_filter=0x7f0800be;
+        public static final int action_filter_id=0x7f0800be;
+        public static final int action_filter_name=0x7f0800bf;
+        public static final int action_filter_price=0x7f0800c0;
         public static final int action_image=0x7f0800a9;
         public static final int action_menu_divider=0x7f080003;
         public static final int action_menu_presenter=0x7f080004;
@@ -2987,7 +2989,7 @@ containing a value of this type.
         public static final int buttonPanel=0x7f080063;
         public static final int cancel_action=0x7f0800ac;
         public static final int cartButton=0x7f08008d;
-        public static final int cartCheckOutButton=0x7f08008f;
+        public static final int cartCheckOutButton=0x7f080090;
         public static final int center=0x7f080045;
         public static final int center_horizontal=0x7f080046;
         public static final int center_vertical=0x7f080047;
@@ -2999,7 +3001,7 @@ containing a value of this type.
         public static final int collapseActionView=0x7f080039;
         public static final int container=0x7f080093;
         public static final int contentFrame=0x7f08008c;
-        public static final int contentFrameCart=0x7f080090;
+        public static final int contentFrameCart=0x7f08008f;
         public static final int contentPanel=0x7f080066;
         public static final int coordinator=0x7f080094;
         public static final int custom=0x7f08006d;
